@@ -3,7 +3,7 @@ import cors from 'cors';
 import nodemailer from 'nodemailer';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
-import authRoutes from './routes/authRoutes.js';
+import authRoutes from './backend/routes/authRoutes.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
