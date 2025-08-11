@@ -148,11 +148,29 @@ app.get('/api/newsletter/test-config', (req, res) => {
 
 // Serve frontend in production
 if (process.env.NODE_ENV === 'production') {
-  // Adjust path for frontend build folder inside project root
+  // Serve static files from React build
   app.use(express.static(path.join(__dirname, 'frontend', 'build')));
   
+  // Root route - serve React app
+  app.get('/', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
+  });
+  
+  // Catch-all handler: for any request that doesn't match API routes, send back React's index.html
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
+  });
+} else {
+  // Development - simple API response
+  app.get('/', (req, res) => {
+    res.json({ 
+      message: 'Server is running in development mode',
+      endpoints: {
+        health: '/api/health',
+        auth: '/api/auth',
+        newsletter: '/api/newsletter'
+      }
+    });
   });
 }
 
