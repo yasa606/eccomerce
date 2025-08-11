@@ -1,0 +1,259 @@
+/* ===========================================
+   LUXURY PRODUCT DISPLAY STYLES
+   Premium product view styling system
+   =========================================== */
+
+@import url('../../styles/global-luxury.css');
+
+.productdisplay-luxury {
+    display: flex;
+    margin: 0px 120px;
+    gap: 80px;
+    align-items: flex-start;
+    padding: 60px 0;
+}
+
+.productdisplay-luxury-left {
+    display: flex;
+    gap: 30px;
+    flex: 1;
+}
+
+.productdisplay-luxury-img-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.productdisplay-luxury-img-list img {
+    height: 120px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.productdisplay-luxury-img-list img:hover {
+    border-color: var(--luxury-gold);
+    transform: scale(1.05);
+}
+
+.productdisplay-luxury-main-img {
+    margin-left: 200px;
+    width: 700px;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: var(--shadow-premium);
+}
+
+.productdisplay-luxury-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.productdisplay-luxury-right h1 {
+    font-family: var(--font-primary);
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--luxury-gold);
+    line-height: 1.2;
+}
+
+.productdisplay-luxury-rating {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.productdisplay-luxury-rating .stars {
+    display: flex;
+    gap: 5px;
+}
+
+.productdisplay-luxury-rating .stars img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) saturate(100%) invert(74%) sepia(89%) saturate(1468%) hue-rotate(6deg) brightness(94%) contrast(87%);
+}
+
+.productdisplay-luxury-rating .reviews {
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--luxury-silver);
+}
+
+.productdisplay-luxury-prices {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.productdisplay-luxury-price-new {
+    font-family: var(--font-primary);
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--luxury-gold);
+}
+
+.productdisplay-luxury-price-old {
+    font-family: var(--font-secondary);
+    font-size: 24px;
+    color: var(--luxury-silver);
+    text-decoration: line-through;
+}
+
+.productdisplay-luxury-price-discount {
+    background: var(--gradient-gold);
+    color: var(--luxury-charcoal);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.productdisplay-luxury-size {
+    margin-top: 30px;
+}
+
+.productdisplay-luxury-size h3 {
+    font-family: var(--font-secondary);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--luxury-charcoal);
+    margin-bottom: 20px;
+}
+
+.productdisplay-luxury-sizes {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.productdisplay-luxury-size-option {
+    padding: 15px 25px;
+    border: 2px solid var(--luxury-silver);
+    border-radius: 50px;
+    background: transparent;
+    color: var(--luxury-charcoal);
+    font-family: var(--font-body);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 60px;
+    text-align: center;
+}
+
+.productdisplay-luxury-size-option:hover,
+.productdisplay-luxury-size-option.selected {
+    border-color: var(--luxury-gold);
+    background: var(--luxury-gold);
+    color: var(--luxury-charcoal);
+}
+
+.productdisplay-luxury-actions {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.productdisplay-luxury-add-cart {
+    background: var(--gradient-gold);
+    color: var(--luxury-charcoal);
+    border: none;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-luxury);
+}
+
+.productdisplay-luxury-add-cart:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+.productdisplay-luxury-wishlist {
+    background: var(--luxury-gold-dark);
+    color: black;
+    border: 2px solid var(--luxury-charcoal);
+    padding: 18px 30px;
+    border-radius: 50px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.productdisplay-luxury-wishlist:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+.productdisplay-luxury-details {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(192, 192, 192, 0.3);
+}
+
+.productdisplay-luxury-details h3 {
+    font-family: var(--font-secondary);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--luxury-charcoal);
+    margin-bottom: 20px;
+}
+
+.productdisplay-luxury-details p {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--luxury-charcoal);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .productdisplay-luxury {
+        margin: 0px 60px;
+        gap: 60px;
+    }
+}
+
+@media (max-width: 992px) {
+    .productdisplay-luxury {
+        flex-direction: column;
+        margin: 0px 40px;
+        gap: 40px;
+    }
+    
+    .productdisplay-luxury-main-img {
+        width: 100%;
+        max-width: 500px;
+        height: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .productdisplay-luxury {
+        margin: 0px 20px;
+        padding: 40px 0;
+    }
+    
+    .productdisplay-luxury-right h1 {
+        font-size: 32px;
+    }
+    
+    .productdisplay-luxury-price-new {
+        font-size: 28px;
+    }
+}

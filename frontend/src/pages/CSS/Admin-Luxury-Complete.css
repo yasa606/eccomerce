@@ -1,0 +1,506 @@
+/* ============================================
+   LUXURY ADMIN DASHBOARD - PREMIUM STYLING
+   Gold & Black Luxury Theme with Glassmorphism
+   ============================================ */
+
+/* Import Premium Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Luxury Color Palette */
+:root {
+  --luxury-gold: #D4AF37;
+  --luxury-gold-light: #F7E6A3;
+  --luxury-gold-dark: #B8860B;
+  --luxury-black: #0A0A0A;
+  --luxury-charcoal: #1C1C1C;
+  --luxury-gray: #2A2A2A;
+  --luxury-silver: #C0C0C0;
+  --luxury-white: #FAFAFA;
+  --luxury-gradient: linear-gradient(135deg, #0A0A0A 0%, #1C1C1C 50%, #0A0A0A 100%);
+  --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #F7E6A3 50%, #B8860B 100%);
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(212, 175, 55, 0.2);
+  --shadow-gold: 0 8px 32px rgba(212, 175, 55, 0.15);
+  --shadow-dark: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Base Reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--luxury-gradient);
+  color: var(--luxury-white);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Luxury Dashboard Container */
+.admin-dashboard-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Premium Header */
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 30px 40px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  box-shadow: var(--shadow-gold);
+}
+
+.admin-header h1 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.admin-header-actions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Luxury Buttons */
+.admin-logout-btn,
+.admin-action-btn {
+  background: var(--gold-gradient);
+  color: var(--luxury-black);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-logout-btn::before,
+.admin-action-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.admin-logout-btn:hover::before,
+.admin-action-btn:hover::before {
+  left: 100%;
+}
+
+.admin-logout-btn:hover,
+.admin-action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+
+/* Luxury Stats Grid */
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gold-gradient);
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-gold);
+}
+
+.stat-card h3 {
+  margin: 0 0 15px 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--luxury-gold);
+}
+
+.stat-card p {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Luxury Controls Section */
+.admin-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 30px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Luxury Search */
+.admin-search {
+  position: relative;
+  flex: 1;
+  max-width: 400px;
+}
+
+.admin-search-input {
+  width: 100%;
+  padding: 15px 50px 15px 20px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 15px;
+  color: var(--luxury-white);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.admin-search-input:focus {
+  outline: none;
+  border-color: var(--luxury-gold);
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+}
+
+.admin-search-input::placeholder {
+  color: var(--luxury-silver);
+}
+
+/* Luxury Category Tabs */
+.admin-category-tabs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.category-tab {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  padding: 15px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+
+.category-tab.active {
+  background: var(--gold-gradient);
+  color: var(--luxury-black);
+  border-color: transparent;
+}
+
+.category-count {
+  background: var(--luxury-gold);
+  color: var(--luxury-black);
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Luxury Product Grid */
+.admin-product-grid h2 {
+  margin-bottom: 30px;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.product-count {
+  color: var(--luxury-silver);
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+/* Luxury Table Container */
+.product-table-container {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-dark);
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th {
+  background: var(--glass-bg);
+  padding: 20px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--luxury-gold);
+  border-bottom: 2px solid var(--glass-border);
+  font-size: 1rem;
+}
+
+.admin-table td {
+  padding: 20px;
+  border-bottom: 1px solid var(--glass-border);
+  transition: all 0.3s ease;
+}
+
+.admin-table tbody tr:hover {
+  background: rgba(212, 175, 55, 0.05);
+}
+
+.admin-product-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid var(--glass-border);
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-info strong {
+  color: var(--luxury-white);
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.product-info small {
+  color: var(--luxury-silver);
+  font-size: 0.9rem;
+}
+
+.category-badge {
+  background: var(--gold-gradient);
+  color: var(--luxury-black);
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.stars {
+  color: var(--luxury-gold);
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status-badge.new {
+  background: var(--gold-gradient);
+  color: var(--luxury-black);
+}
+
+/* Luxury Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.admin-edit-btn, 
+.admin-delete-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.admin-edit-btn {
+  background: var(--gold-gradient);
+  color: var(--luxury-black);
+}
+
+.admin-delete-btn {
+  background: linear-gradient(135deg, #ff4757, #ff3742);
+  color: var(--luxury-white);
+}
+
+.admin-edit-btn:hover,
+.admin-delete-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Luxury No Products State */
+.no-products {
+  text-align: center;
+  padding: 80px 40px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  color: var(--luxury-silver);
+}
+
+.add-first-product {
+  background: var(--gold-gradient);
+  color: var(--luxury-black);
+  border: none;
+  padding: 15px 30px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.add-first-product:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-dashboard-container {
+    padding: 20px 10px;
+  }
+  
+  .admin-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .admin-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .admin-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .admin-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .admin-category-tabs {
+    justify-content: center;
+  }
+  
+  .admin-table {
+    font-size: 0.9rem;
+  }
+  
+  .admin-table th,
+  .admin-table td {
+    padding: 15px 10px;
+  }
+  
+  .admin-product-image {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--luxury-charcoal);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold-gradient);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--luxury-gold);
+}
+
+/* Loading Animation */
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--glass-border);
+  border-radius: 50%;
+  border-top-color: var(--luxury-gold);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Pulse Animation for Stats */
+.stat-card:hover .stat-value {
+  animation: pulse 0.6s ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}

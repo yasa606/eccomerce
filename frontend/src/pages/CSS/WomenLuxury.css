@@ -1,0 +1,166 @@
+.women-luxury {
+  padding: 120px 20px 20px;
+  width: 100%;
+  margin: 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  min-height: 100vh;
+}
+
+/* Make the grid wider for more products */
+.women-luxury-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 35px;
+  padding: 0 20px;
+}
+
+/* Make items larger */
+.women-luxury-hero {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 80px 40px;
+  background: linear-gradient(135deg, #544400 0%, #c9dc03 50%, #1a1a1a 100%);
+  border-radius: 25px;
+  color: white;
+  box-shadow: 0 15px 40px rgba(255, 105, 180, 0.4);
+}
+
+.women-luxury-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
+}
+
+.women-luxury-hero p {
+  font-size: 1.5rem;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.women-luxury-hero {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #d4af37 0%, #b8860b 50%, #1a1a1a 100%);
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+}
+
+.women-luxury-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.women-luxury-hero p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+.add-product-btn {
+  background: linear-gradient(135deg, #ff69b4, #ff1493);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+}
+
+.add-product-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 105, 180, 0.6);
+}
+
+.add-product-form {
+  background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+  padding: 40px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  border: 1px solid #ff69b4;
+}
+
+.add-product-form h3 {
+  color: #ff69b4;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+}
+
+.add-product-form form {
+  display: grid;
+  gap: 15px;
+}
+
+.add-product-form input {
+  padding: 12px;
+  border: 1px solid #ff69b4;
+  border-radius: 8px;
+  background: #1a1a1a;
+  color: white;
+  font-size: 1rem;
+}
+
+.add-product-form input::placeholder {
+  color: #888;
+}
+
+.add-product-form button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.add-product-form button[type="submit"] {
+  background: linear-gradient(135deg, #ff69b4, #ff1493);
+  color: white;
+}
+
+.add-product-form button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.5);
+}
+
+.add-product-form button[type="button"] {
+  background: #1a1a1a;
+  color: white;
+  border: 1px solid #ff69b4;
+}
+
+.add-product-form button[type="button"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+}
+
+.women-luxury-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .women-luxury-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .women-luxury-hero p {
+    font-size: 1.1rem;
+  }
+  
+  .women-luxury-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

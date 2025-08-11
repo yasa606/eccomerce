@@ -1,0 +1,158 @@
+/* ===========================================
+   LUXURY TERMS OF SERVICE PAGE STYLES
+   Premium styling for Terms of Service page
+   =========================================== */
+
+/* Luxury Terms of Service Container */
+.luxury-page-container {
+  padding: 120px 20px 40px;
+  width: 100%;
+  margin: 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+.luxury-page-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Luxury Terms of Service Header */
+.luxury-page-header {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #d4af37 0%, #b8860b 50%, #1a1a1a 100%);
+  border-radius: 25px;
+  color: white;
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+}
+
+.luxury-page-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
+}
+
+.luxury-page-header p {
+  font-size: 1.5rem;
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
+/* Luxury Content Section */
+.luxury-content-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.luxury-content-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.luxury-content-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(212, 175, 55, 0.2);
+}
+
+.luxury-content-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #d4af37;
+  margin-bottom: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.luxury-content-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #d4af37;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.luxury-content-card p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #f8f8ff;
+  margin-bottom: 20px;
+}
+
+.luxury-content-card ul {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #f8f8ff;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.luxury-content-card li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.luxury-content-card li::before {
+  content: '•';
+  color: #d4af37;
+  position: absolute;
+  left: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .luxury-page-wrapper {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .luxury-page-container {
+    padding: 100px 15px 20px;
+  }
+  
+  .luxury-page-header {
+    padding: 40px 20px;
+  }
+  
+  .luxury-page-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .luxury-page-header p {
+    font-size: 1.2rem;
+  }
+  
+  .luxury-content-card {
+    padding: 30px;
+  }
+  
+  .luxury-content-card h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .luxury-page-header {
+    padding: 30px 15px;
+  }
+  
+  .luxury-page-header h1 {
+    font-size: 2rem;
+  }
+}

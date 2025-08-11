@@ -1,0 +1,141 @@
+/* ===========================================
+   LUXURY NEWSLETTER - EXCLUSIVE STYLING
+   =========================================== */
+
+.news-letter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 80px;
+  background: linear-gradient(135deg, #1C1C1C, #4B0082, #800020);
+  width: 60%;
+  height: 50vh;
+  margin: 0 auto 150px auto;
+  gap: 40px;
+  border-radius: 50px;
+  box-shadow: 0 8px 32px rgba(212, 175, 55, 0.15);
+  font-family: 'Playfair Display', serif;
+  color: #F8F8FF;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.news-letter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(128, 0, 32, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.news-letter h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #D4AF37;
+  text-shadow: 0 2px 6px rgba(212, 175, 55, 0.7);
+  margin: 0;
+}
+
+.news-letter p {
+  font-size: 20px;
+  font-weight: 500;
+  color: #F8F8FF;
+  opacity: 0.85;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.news-letter div {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  max-width: 700px;
+  height: 60px;
+  border-radius: 80px;
+  border: 1px solid #D4AF37;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.news-letter div:hover {
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+}
+
+.news-letter input {
+  flex: 1;
+  height: 60px;
+  border-radius: 80px;
+  border: none;
+  padding-left: 30px;
+  font-size: 18px;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  background: transparent;
+  color: #F8F8FF;
+  caret-color: #D4AF37;
+}
+
+.news-letter input::placeholder {
+  color: #F8F8FF;
+  opacity: 0.7;
+}
+
+.news-letter div button {
+  width: 210px;
+  height: 60px;
+  border-radius: 80px;
+  background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+  color: #1C1C1C;
+  font-size: 22px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 32px rgba(212, 175, 55, 0.15);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-letter div button:hover {
+  background: #B8860B;
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .news-letter {
+    width: 90%;
+    padding: 30px 20px;
+    height: auto;
+  }
+  
+  .news-letter h1 {
+    font-size: 36px;
+  }
+  
+  .news-letter p {
+    font-size: 16px;
+  }
+  
+  .news-letter div {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+  
+  .news-letter input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .news-letter div button {
+    width: 100%;
+  }
+}

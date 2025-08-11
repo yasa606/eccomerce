@@ -1,0 +1,297 @@
+/* ===========================================
+   LUXURY OFFERS SECTION ENHANCEMENTS
+   Premium styling for exclusive offers showcase
+   =========================================== */
+
+.offers-luxury {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    margin: auto;
+    background: var(--gradient-luxury);
+    position: relative;
+    overflow: hidden;
+}
+
+.offers-luxury::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(128, 0, 32, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 60% 60%, rgba(75, 0, 130, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.offers-left-luxury {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.offers-left-luxury::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.offers-title-luxury {
+    color: var(--luxury-gold);
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-family: var(--font-primary);
+}
+
+.offers-subtitle-luxury {
+    color: var(--luxury-pearl);
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    font-family: var(--font-secondary);
+}
+
+.offers-description-luxury {
+    color: var(--luxury-silver);
+    font-size: 18px;
+    margin-bottom: 50px;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+.offers-cta-luxury {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.btn-offers-luxury {
+    padding: 18px 50px;
+    background: var(--gradient-gold);
+    color: var(--luxury-charcoal);
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-luxury);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-offers-luxury::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-offers-luxury:hover::before {
+    left: 100%;
+}
+
+.btn-offers-luxury:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(212, 175, 55, 0.3);
+}
+
+.btn-offers-outline {
+    background: transparent;
+    color: var(--luxury-gold);
+    border: 2px solid var(--luxury-gold);
+}
+
+.btn-offers-outline:hover {
+    background: var(--luxury-gold);
+    color: var(--luxury-charcoal);
+}
+
+.offers-right-luxury {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 40px;
+}
+
+.offers-image-container-luxury {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.offers-image-luxury {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease;
+    border: 3px solid var(--luxury-gold);
+    border-radius: 30px;
+}
+
+.offers-image-container-luxury::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, transparent 0%, rgba(212, 175, 55, 0.1) 100%);
+    z-index: 1;
+}
+
+.offers-image-container-luxury:hover .offers-image-luxury {
+    transform: scale(1.05);
+}
+
+.offers-badge-luxury {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: var(--gradient-gold);
+    color: var(--luxury-charcoal);
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 2;
+}
+
+.offers-stats-luxury {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    display: flex;
+    gap: 20px;
+    z-index: 2;
+}
+
+.stat-item-luxury {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 15px;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.stat-number-luxury {
+    color: var(--luxury-gold);
+    font-size: 24px;
+    font-weight: 700;
+    display: block;
+}
+
+.stat-label-luxury {
+    color: var(--luxury-pearl);
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* Floating Animation */
+.floating-offers {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .offers-luxury {
+        flex-direction: column;
+        padding: 80px 40px;
+    }
+    
+    .offers-left-luxury {
+        padding: 0;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    
+    .offers-title-luxury {
+        font-size: 56px;
+    }
+    
+    .offers-cta-luxury {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .offers-luxury {
+        padding: 60px 20px;
+    }
+    
+    .offers-title-luxury {
+        font-size: 48px;
+    }
+    
+    .offers-subtitle-luxury {
+        font-size: 20px;
+    }
+    
+    .offers-image-container-luxury {
+        width: 100%;
+        max-width: 400px;
+        height: 400px;
+    }
+    
+    .offers-cta-luxury {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .offers-title-luxury {
+        font-size: 36px;
+    }
+    
+    .offers-image-container-luxury {
+        max-width: 300px;
+        height: 300px;
+    }
+}

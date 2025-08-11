@@ -1,0 +1,220 @@
+/* Enhanced Hero Section with Realistic Motion Effects */
+
+.hero {
+  height: 100vh;
+  background: var(--gradient-luxury);
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  /* Parallax background effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Animated background particles */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 70%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+  animation: floatBackground 6s ease-in-out infinite;
+}
+
+@keyframes floatBackground {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-10px) scale(1.05); }
+}
+
+.hero-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 180px;
+  line-height: 1.1;
+  margin-top: 100px;
+  /* Staggered entrance animation */
+  animation: slideInLeft 1.2s ease-out;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-left h2 {
+  font-weight: 600;
+  font-size: 26px;
+  color: var(--luxury-silver);
+  margin-top: 400px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  /* Typewriter effect */
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typewriter 2s steps(20) 0.5s both;
+}
+
+@keyframes typewriter {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+.hero-hand-icon {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 15px;
+  animation: bounceIn 1s ease-out 0.8s both;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(-50px);
+  }
+  50% {
+    transform: scale(1.1) translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.hero-hand-icon img {
+  width: 105px;
+  filter: drop-shadow(0 2px 4px rgba(212, 175, 55, 0.3));
+  animation: handWave 2s ease-in-out infinite 2s;
+}
+
+@keyframes handWave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+}
+
+.hero-left p {
+  font-weight: 700;
+  font-size: 100px;
+  color: var(--luxury-gold);
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, var(--luxury-gold), var(--luxury-gold-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+  0% { text-shadow: 0 0 10px rgba(212, 175, 55, 0.5); }
+  100% { text-shadow: 0 0 20px rgba(212, 175, 55, 0.8), 0 0 30px rgba(212, 175, 55, 0.6); }
+}
+
+.hero-latest-btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+  padding: 12px 24px;
+  background: var(--gradient-gold);
+  color: var(--luxury-charcoal);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  width: 310px;
+  height: 70px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-luxury);
+  position: relative;
+  overflow: hidden;
+  animation: slideInUp 1s ease-out 1.2s both;
+}
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-latest-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 40px rgba(212, 175, 55, 0.25);
+}
+
+.hero-latest-btn:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideInRight 1.2s ease-out 0.6s both;
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-right img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+ 
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-15px) scale(1.02); }
+}
+
+/* Responsive animations */
+@media (max-width: 768px) {
+  .hero-left {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .hero-left h2 {
+    font-size: 20px;
+  }
+  
+  .hero-left p {
+    font-size: 60px;
+  }
+  
+  .hero-latest-btn {
+    width: 280px;
+    height: 60px;
+    font-size: 1rem;
+  }
+}

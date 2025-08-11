@@ -1,0 +1,307 @@
+/* ===========================================
+   UNIFIED LUXURY PAGES STYLES
+   Premium styling for About Us, Contact Us, Privacy Policy, Terms of Service
+   Matches Cart-luxury.css design system
+   =========================================== */
+
+/* Root Variables - Matching Cart Luxury Theme */
+:root {
+  --luxury-charcoal: #1a1a1a;
+  --luxury-gold: #d4af37;
+  --luxury-gold-light: #b8860b;
+  --luxury-gradient: linear-gradient(135deg, var(--luxury-gold) 0%, var(--luxury-gold-light) 50%, var(--luxury-charcoal) 100%);
+  --luxury-bg-dark: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  --luxury-bg-light: linear-gradient(135deg, #fafafa 0%, #f5f5f5 50%, #f0f0f0 100%);
+  --luxury-text-primary: #f8f8ff;
+  --luxury-text-secondary: #555;
+  --luxury-border: rgba(212, 175, 55, 0.3);
+  --luxury-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --luxury-shadow-gold: 0 15px 40px rgba(212, 175, 55, 0.4);
+}
+
+/* Universal Luxury Container */
+.luxury-page-container {
+  min-height: 100vh;
+  background: var(--luxury-bg-dark);
+  padding: 120px 20px 40px;
+  width: 100%;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.luxury-page-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Luxury Header - Matching Cart Style */
+.luxury-page-header {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 60px 20px;
+  background: var(--luxury-gradient);
+  border-radius: 25px;
+  color: var(--luxury-text-primary);
+  box-shadow: var(--luxury-shadow-gold);
+}
+
+.luxury-page-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
+}
+
+.luxury-page-header p {
+  font-size: 1.5rem;
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
+/* Luxury Content Container */
+.luxury-content-container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--luxury-border);
+  border-radius: 20px;
+  padding: 60px;
+  margin-bottom: 40px;
+  box-shadow: var(--luxury-shadow);
+}
+
+/* Typography - Matching Cart */
+.luxury-content-container h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: var(--luxury-gold);
+  margin-bottom: 30px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.luxury-content-container h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--luxury-gold-light);
+  margin: 40px 0 20px;
+  font-weight: 400;
+}
+
+.luxury-content-container p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--luxury-text-primary);
+  margin-bottom: 20px;
+}
+
+.luxury-content-container ul {
+  margin: 20px 0 20px 30px;
+}
+
+.luxury-content-container li {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--luxury-text-primary);
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.luxury-content-container li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--luxury-gold);
+  font-weight: bold;
+}
+
+/* Contact Form Styling */
+.luxury-contact-form {
+  display: grid;
+  gap: 30px;
+}
+
+.luxury-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.luxury-form-group label {
+  font-size: 1.1rem;
+  color: var(--luxury-gold);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.luxury-form-group input,
+.luxury-form-group textarea {
+  width: 100%;
+  padding: 16px 20px;
+  border: 1px solid var(--luxury-border);
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: var(--luxury-text-primary);
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.luxury-form-group input:focus,
+.luxury-form-group textarea:focus {
+  outline: none;
+  border-color: var(--luxury-gold);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+}
+
+.luxury-form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* Luxury Button - Matching Cart */
+.luxury-submit-btn {
+  width: 100%;
+  background: var(--luxury-gradient);
+  color: var(--luxury-charcoal);
+  border: none;
+  padding: 18px 50px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 30px;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.luxury-submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+}
+
+/* Grid Layout for Contact/About */
+.luxury-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin: 40px 0;
+}
+
+.luxury-info-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--luxury-border);
+  border-radius: 15px;
+  padding: 40px;
+  transition: all 0.3s ease;
+}
+
+.luxury-info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--luxury-shadow-gold);
+}
+
+/* Responsive Design - Matching Cart */
+@media (max-width: 1200px) {
+  .luxury-page-wrapper {
+    padding: 0 20px;
+  }
+  
+  .luxury-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .luxury-page-container {
+    padding: 100px 15px 20px;
+  }
+  
+  .luxury-page-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .luxury-content-container {
+    padding: 40px 20px;
+  }
+  
+  .luxury-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .luxury-page-header {
+    padding: 40px 15px;
+  }
+  
+  .luxury-page-header h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Utility Classes */
+.luxury-text-center { text-align: center; }
+.luxury-mb-30 { margin-bottom: 30px; }
+.luxury-mt-40 { margin-top: 40px; }
+.luxury-highlight { color: var(--luxury-gold); font-weight: 600; }
+
+/* Page-Specific Overrides */
+.luxury-about-container .luxury-content-container,
+.luxury-contact-container .luxury-content-container,
+.luxury-policy-container .luxury-content-container,
+.luxury-terms-container .luxury-content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Contact Page Specific */
+.luxury-contact-info {
+  display: grid;
+  gap: 30px;
+}
+
+.luxury-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.luxury-contact-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.luxury-contact-item i {
+  font-size: 24px;
+  color: var(--luxury-gold);
+  min-width: 24px;
+}
+
+Plan:
+- Update the CSS files for About Us, Contact Us, Privacy Policy, and Terms of Service pages to adopt the dark luxury theme styling similar to the Cart page.
+- This includes changing background gradients, text colors, container styles, box shadows, and accent colors to match the cart page's gold and dark color scheme.
+- Ensure consistent font usage and spacing as per the cart page.
+- Update container class names if needed to reflect the luxury-cart-container style or create new consistent class names.
+- Test responsiveness and hover effects to match the cart page style.
+
+Dependent files to edit:
+- frontend/src/pages/CSS/AboutUs-luxury.css
+- frontend/src/pages/CSS/ContactUs-luxury.css
+- frontend/src/pages/CSS/PrivacyPolicy-luxury.css
+- frontend/src/pages/CSS/TermsOfService-luxury.css
+
+Follow-up steps:
+- After editing, verify the visual consistency by running the app and viewing these pages.
+- Adjust any page-specific elements that may need fine-tuning for the new style.
+
+Please confirm if I should proceed with this plan to update the CSS files accordingly.

@@ -1,0 +1,214 @@
+.men-luxury {
+  padding: 120px 20px 20px;
+  width: 100%;
+  margin: 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  min-height: 100vh;
+}
+
+/* Make the grid wider for more products */
+.men-luxury-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 35px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+/* Make items larger */
+.men-luxury-item {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.men-luxury-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(212, 175, 55, 0.5);
+}
+
+/* Make hero section wider */
+.men-luxury-hero {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 80px 40px;
+  background: linear-gradient(135deg, #d4af37 0%, #b8860b 50%, #1a1a1a 100%);
+  border-radius: 25px;
+  color: white;
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+}
+
+.men-luxury-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
+}
+
+.men-luxury-hero p {
+  font-size: 1.5rem;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+/* Luxury button styling */
+.add-product-btn {
+  background: linear-gradient(135deg, #d4af37, #b8860b);
+  color: white;
+  border: none;
+  padding: 18px 40px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+}
+
+.add-product-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(212, 175, 55, 0.7);
+}
+
+.men-luxury-hero {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #d4af37 0%, #b8860b 50%, #1a1a1a 100%);
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+.men-luxury-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.men-luxury-hero p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+.add-product-btn {
+  background: linear-gradient(135deg, #d4af37, #b8860b);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+}
+
+.add-product-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+}
+
+.add-product-form {
+  background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+  padding: 40px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  border: 1px solid #d4af37;
+}
+
+.add-product-form h3 {
+  color: #d4af37;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+}
+
+.add-product-form form {
+  display: grid;
+  gap: 15px;
+}
+
+.add-product-form input {
+  padding: 12px;
+  border: 1px solid #d4af37;
+  border-radius: 8px;
+  background: #1a1a1a;
+  color: white;
+  font-size: 1rem;
+}
+
+.add-product-form button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.add-product-form button[type="submit"] {
+  background: linear-gradient(135deg, #d4af37, #b8860b);
+  color: white;
+}
+
+.add-product-form button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+}
+
+.men-luxury-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.men-luxury-item {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.men-luxury-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(212, 175, 55, 0.4);
+}
+
+.rank-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: linear-gradient(135deg, #d4af37, #b8860b);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1.1rem;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 768px) {
+  .men-luxury-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .men-luxury-hero p {
+    font-size: 1.1rem;
+  }
+  
+  .men-luxury-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
