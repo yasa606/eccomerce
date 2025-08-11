@@ -3,7 +3,7 @@ import cors from 'cors';
 import nodemailer from 'nodemailer';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
-import authRoutes from './backend/routes/authRoutes.js';
+import authRoutes from './backend/routes/authRoutes.js'; // adjust if this path is still correct
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -21,7 +21,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Email transporter
+// Email transporter (same as your code)
 const createTransporter = () => {
   if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
     console.error('Missing email configuration in environment variables');
@@ -54,7 +54,7 @@ if (!transporter) {
   console.error('Email transporter not configured. Please check your .env file.');
 }
 
-// Newsletter subscription endpoint
+// Newsletter subscription endpoint (same as your code)
 app.post('/api/newsletter/subscribe', async (req, res) => {
   try {
     const { email } = req.body;
@@ -148,9 +148,11 @@ app.get('/api/newsletter/test-config', (req, res) => {
 
 // Serve frontend in production
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'frontend/build')));
+  // Adjust path for frontend build folder inside project root
+  app.use(express.static(path.join(__dirname, 'frontend', 'build')));
+  
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'));
+    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
   });
 }
 
