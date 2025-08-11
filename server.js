@@ -7,7 +7,7 @@ import authRoutes from './backend/routes/authRoutes.js'; // adjust if this path 
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-dotenv.config();
+dotenv.config({ path: './backend/.env' });
 
 const app = express();
 const PORT = process.env.PORT || 3001;
